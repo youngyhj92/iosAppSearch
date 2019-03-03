@@ -12,9 +12,13 @@
 		CD3EC529222ADBB700ECDD73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC527222ADBB700ECDD73 /* Main.storyboard */; };
 		CD3EC52B222ADBB900ECDD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */; };
 		CD3EC52E222ADBB900ECDD73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC52C222ADBB900ECDD73 /* LaunchScreen.storyboard */; };
+		CD46AA07222AE1EF002EE3FE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = CD46AA06222AE1EF002EE3FE /* .swiftlint.yml */; };
+		FE7477118C1C753E61F0D1C7 /* Pods_appleAppSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698C1A0647A1142CFA109D00 /* Pods_appleAppSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		698C1A0647A1142CFA109D00 /* Pods_appleAppSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appleAppSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA04B79C0C21680AC65D68FA /* Pods-appleAppSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appleAppSearch.debug.xcconfig"; path = "Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		CD3EC520222ADBB700ECDD73 /* appleAppSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appleAppSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EC525222ADBB700ECDD73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD3EC52D222ADBB900ECDD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD3EC52F222ADBB900ECDD73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD46AA06222AE1EF002EE3FE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D9A0D9602BE8FE575EA6A186 /* Pods-appleAppSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appleAppSearch.release.xcconfig"; path = "Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7477118C1C753E61F0D1C7 /* Pods_appleAppSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42B5EAB23E8777B8417A474E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA04B79C0C21680AC65D68FA /* Pods-appleAppSearch.debug.xcconfig */,
+				D9A0D9602BE8FE575EA6A186 /* Pods-appleAppSearch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CD3EC517222ADBB700ECDD73 = {
 			isa = PBXGroup;
 			children = (
 				CD3EC522222ADBB700ECDD73 /* appleAppSearch */,
 				CD3EC521222ADBB700ECDD73 /* Products */,
+				42B5EAB23E8777B8417A474E /* Pods */,
+				CDEBF7DDC0CA92603E9C745B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +78,17 @@
 				CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */,
 				CD3EC52C222ADBB900ECDD73 /* LaunchScreen.storyboard */,
 				CD3EC52F222ADBB900ECDD73 /* Info.plist */,
+				CD46AA06222AE1EF002EE3FE /* .swiftlint.yml */,
 			);
 			path = appleAppSearch;
+			sourceTree = "<group>";
+		};
+		CDEBF7DDC0CA92603E9C745B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				698C1A0647A1142CFA109D00 /* Pods_appleAppSearch.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3EC532222ADBB900ECDD73 /* Build configuration list for PBXNativeTarget "appleAppSearch" */;
 			buildPhases = (
+				EC14EDAF218CCA472B61CC0F /* [CP] Check Pods Manifest.lock */,
 				CD3EC51C222ADBB700ECDD73 /* Sources */,
 				CD3EC51D222ADBB700ECDD73 /* Frameworks */,
 				CD3EC51E222ADBB700ECDD73 /* Resources */,
+				0ECF37B45B645526ABA1EE6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD46AA07222AE1EF002EE3FE /* .swiftlint.yml in Resources */,
 				CD3EC52E222ADBB900ECDD73 /* LaunchScreen.storyboard in Resources */,
 				CD3EC52B222ADBB900ECDD73 /* Assets.xcassets in Resources */,
 				CD3EC529222ADBB700ECDD73 /* Main.storyboard in Resources */,
@@ -129,6 +159,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0ECF37B45B645526ABA1EE6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC14EDAF218CCA472B61CC0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-appleAppSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD3EC51C222ADBB700ECDD73 /* Sources */ = {
@@ -280,6 +361,7 @@
 		};
 		CD3EC533222ADBB900ECDD73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA04B79C0C21680AC65D68FA /* Pods-appleAppSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +379,7 @@
 		};
 		CD3EC534222ADBB900ECDD73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A0D9602BE8FE575EA6A186 /* Pods-appleAppSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

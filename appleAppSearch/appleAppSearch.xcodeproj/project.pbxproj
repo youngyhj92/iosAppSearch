@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD13465E222C27F200331DBA /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13465D222C27F200331DBA /* ModelTest.swift */; };
 		CD3EC524222ADBB700ECDD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */; };
 		CD3EC526222ADBB700ECDD73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC525222ADBB700ECDD73 /* ViewController.swift */; };
 		CD3EC529222ADBB700ECDD73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC527222ADBB700ECDD73 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		698C1A0647A1142CFA109D00 /* Pods_appleAppSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appleAppSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA04B79C0C21680AC65D68FA /* Pods-appleAppSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appleAppSearch.debug.xcconfig"; path = "Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		CD13465D222C27F200331DBA /* ModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
 		CD3EC520222ADBB700ECDD73 /* appleAppSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appleAppSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EC525222ADBB700ECDD73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CD13465C222C27D200331DBA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CD13465D222C27F200331DBA /* ModelTest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		CD3EC517222ADBB700ECDD73 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		CD3EC522222ADBB700ECDD73 /* appleAppSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CD13465C222C27D200331DBA /* Network */,
 				CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */,
 				CD3EC525222ADBB700ECDD73 /* ViewController.swift */,
 				CD3EC527222ADBB700ECDD73 /* Main.storyboard */,
@@ -216,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD13465E222C27F200331DBA /* ModelTest.swift in Sources */,
 				CD3EC526222ADBB700ECDD73 /* ViewController.swift in Sources */,
 				CD3EC524222ADBB700ECDD73 /* AppDelegate.swift in Sources */,
 			);

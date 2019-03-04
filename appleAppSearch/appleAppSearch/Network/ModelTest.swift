@@ -9,37 +9,50 @@
 import Foundation
 import Moya
 
-public enum Marvel {
-    static private let publicKey = "testPublicKey"
-    static private let privateKey = "testPrivateKey"
+public enum SearchAppleRepo {
     
-    case comics
+    case term(searchStr : String)
     
+    private static let country = "ko"
+    private static let media = "software"
+    private static let limitDataList = 20
 }
 
-extension Marvel : TargetType  {
+extension SearchAppleRepo : TargetType  {
     public var baseURL: URL {
-        <#code#>
+        return URL(string: "https://itunes.apple.com/search?")!
     }
     
     public var path: String {
-        <#code#>
+        switch self {
+        case .term(let searchStr):
+            return "term=\(searchStr)"
+        }
     }
     
     public var method: Moya.Method {
-        <#code#>
+        switch self {
+        case .term(let searchStr):
+            return .get
+        }
     }
     
     public var sampleData: Data {
-        <#code#>
+        return Data()
     }
     
     public var task: Task {
-        <#code#>
+        return .requestParameters(parameters:
+            [
+                "term":"test",
+                "country":SearchAppleRepo.country,
+                "media":SearchAppleRepo.media,
+                "limit":String(describing:SearchAppleRepo.limitDataList)
+            ] ,encoding: URLEncoding.default)
     }
     
     public var headers: [String : String]? {
-        <#code#>
+        return ["Content-Type": "application/json"]
     }
     
     public var validationType: ValidationType {

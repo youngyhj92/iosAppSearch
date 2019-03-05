@@ -31,10 +31,7 @@ extension SearchAppleRepo : TargetType  {
     }
     
     public var method: Moya.Method {
-        switch self {
-        case .term(let searchStr):
-            return .get
-        }
+       return .get
     }
     
     public var sampleData: Data {

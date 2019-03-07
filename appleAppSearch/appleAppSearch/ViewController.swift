@@ -21,14 +21,22 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        let searchApp = SearchAppleRepo.term(searchStr: "test")
+        
          let provider = MoyaProvider<SearchAppleRepo>()
         provider.request(.term(searchStr: "wrapsody"))  {  result in
             switch result {
             case let .success(moyaResponse):
                 let data = moyaResponse.data
+                print("성공")
                 print(data)
             case let .failure(error):
-                print(error)
+                print(searchApp.baseURL)
+                print(searchApp.path)
+                print(searchApp.task)
+                print("실패")
+                print(result.result.error)
                 
             }
         }

@@ -15,7 +15,7 @@ public enum SearchAppleRepo {
     
     private static let country = "ko"
     private static let media = "software"
-    private static let limitDataList = 20
+//    private static let limitDataList = 20
 }
 
 extension SearchAppleRepo : TargetType  {
@@ -31,7 +31,7 @@ extension SearchAppleRepo : TargetType  {
     }
     
     public var method: Moya.Method {
-       return .get
+       return .post
     }
     
     public var sampleData: Data {
@@ -39,13 +39,19 @@ extension SearchAppleRepo : TargetType  {
     }
     
     public var task: Task {
-        return .requestParameters(parameters:
-            [
-                "term":"test",
-                "country":SearchAppleRepo.country,
-                "media":SearchAppleRepo.media,
-                "limit":String(describing:SearchAppleRepo.limitDataList)
-            ] ,encoding: URLEncoding.default)
+        switch self {
+        case .term(let searchStr):
+            return .requestParameters(parameters:
+                [
+                    "term":searchStr,
+                    "country":SearchAppleRepo.country,
+                    "media":SearchAppleRepo.media,
+//                    "limit":String(describing:SearchAppleRepo.limitDataList)
+                ] ,encoding: URLEncoding.queryString)
+        default:
+           return .requestPlain
+        }
+        
     }
     
     public var headers: [String : String]? {

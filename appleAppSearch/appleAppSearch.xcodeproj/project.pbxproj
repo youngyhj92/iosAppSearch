@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD13465E222C27F200331DBA /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13465D222C27F200331DBA /* ModelTest.swift */; };
+		CD1083A22233BA3300EAE560 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1083A12233BA3200EAE560 /* SearchModel.swift */; };
+		CD1083A5223418AD00EAE560 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1083A4223418AD00EAE560 /* SearchResultViewController.swift */; };
+		CD13465E222C27F200331DBA /* SearchAppleRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13465D222C27F200331DBA /* SearchAppleRepo.swift */; };
 		CD3EC524222ADBB700ECDD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */; };
-		CD3EC526222ADBB700ECDD73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC525222ADBB700ECDD73 /* ViewController.swift */; };
+		CD3EC526222ADBB700ECDD73 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC525222ADBB700ECDD73 /* SearchViewController.swift */; };
 		CD3EC529222ADBB700ECDD73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC527222ADBB700ECDD73 /* Main.storyboard */; };
 		CD3EC52B222ADBB900ECDD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */; };
 		CD3EC52E222ADBB900ECDD73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC52C222ADBB900ECDD73 /* LaunchScreen.storyboard */; };
@@ -20,10 +22,12 @@
 /* Begin PBXFileReference section */
 		698C1A0647A1142CFA109D00 /* Pods_appleAppSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appleAppSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA04B79C0C21680AC65D68FA /* Pods-appleAppSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appleAppSearch.debug.xcconfig"; path = "Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch.debug.xcconfig"; sourceTree = "<group>"; };
-		CD13465D222C27F200331DBA /* ModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
+		CD1083A12233BA3200EAE560 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		CD1083A4223418AD00EAE560 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		CD13465D222C27F200331DBA /* SearchAppleRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppleRepo.swift; sourceTree = "<group>"; };
 		CD3EC520222ADBB700ECDD73 /* appleAppSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appleAppSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD3EC525222ADBB700ECDD73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD3EC525222ADBB700ECDD73 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CD3EC528222ADBB700ECDD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD3EC52D222ADBB900ECDD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,10 +57,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CD1083A02233B91900EAE560 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD1083A12233BA3200EAE560 /* SearchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD1083A32234187000EAE560 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD3EC525222ADBB700ECDD73 /* SearchViewController.swift */,
+				CD1083A4223418AD00EAE560 /* SearchResultViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		CD13465C222C27D200331DBA /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CD13465D222C27F200331DBA /* ModelTest.swift */,
+				CD13465D222C27F200331DBA /* SearchAppleRepo.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -82,9 +103,10 @@
 		CD3EC522222ADBB700ECDD73 /* appleAppSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CD1083A32234187000EAE560 /* ViewController */,
+				CD1083A02233B91900EAE560 /* Model */,
 				CD13465C222C27D200331DBA /* Network */,
 				CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */,
-				CD3EC525222ADBB700ECDD73 /* ViewController.swift */,
 				CD3EC527222ADBB700ECDD73 /* Main.storyboard */,
 				CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */,
 				CD3EC52C222ADBB900ECDD73 /* LaunchScreen.storyboard */,
@@ -227,9 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD13465E222C27F200331DBA /* ModelTest.swift in Sources */,
-				CD3EC526222ADBB700ECDD73 /* ViewController.swift in Sources */,
+				CD13465E222C27F200331DBA /* SearchAppleRepo.swift in Sources */,
+				CD3EC526222ADBB700ECDD73 /* SearchViewController.swift in Sources */,
+				CD1083A5223418AD00EAE560 /* SearchResultViewController.swift in Sources */,
 				CD3EC524222ADBB700ECDD73 /* AppDelegate.swift in Sources */,
+				CD1083A22233BA3300EAE560 /* SearchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

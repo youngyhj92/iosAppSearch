@@ -13,20 +13,20 @@ public enum SearchAppleRepo {
     
     case term(searchStr : String)
     
-    private static let country = "ko"
+    private static let country = "KR"
     private static let media = "software"
 //    private static let limitDataList = 20
 }
 
 extension SearchAppleRepo : TargetType  {
     public var baseURL: URL {
-        return URL(string: "https://itunes.apple.com/search?")!
+        return URL(string: "https://itunes.apple.com/")!
     }
     
     public var path: String {
         switch self {
-        case .term(let searchStr):
-            return "term=\(searchStr)"
+        case .term(_):
+            return "search"
         }
     }
     
@@ -44,7 +44,7 @@ extension SearchAppleRepo : TargetType  {
             return .requestParameters(parameters:
                 [
                     "term":searchStr,
-                    "country":SearchAppleRepo.country,
+//                    "country":SearchAppleRepo.country,
                     "media":SearchAppleRepo.media,
 //                    "limit":String(describing:SearchAppleRepo.limitDataList)
                 ] ,encoding: URLEncoding.queryString)

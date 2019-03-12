@@ -9,9 +9,16 @@
 import UIKit
 
 class SearchResultViewController : UITableViewController  {
+    
+    var searchReesultData = SearchResponse(resultCount:-1, results:nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        log.verbose(searchReesultData.resultCount)
+        
+        
     }
     
+
 }

@@ -8,6 +8,12 @@ target 'appleAppSearch' do
   # Pods for appleAppSearch
   # swift Lint
   pod 'SwiftLint'
+  
+ # Logging
+  pod 'SwiftyBeaver'
+
+ # Database
+  pod 'RealmSwift'
 
   # Networking - Moya
   pod 'Moya', '~> 12.0'

@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		CD1083A22233BA3300EAE560 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1083A12233BA3200EAE560 /* SearchModel.swift */; };
 		CD1083A5223418AD00EAE560 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1083A4223418AD00EAE560 /* SearchResultViewController.swift */; };
-		CD13465E222C27F200331DBA /* SearchAppleRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13465D222C27F200331DBA /* SearchAppleRepo.swift */; };
+		CD13465E222C27F200331DBA /* SearchAppleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13465D222C27F200331DBA /* SearchAppleApi.swift */; };
 		CD3EC524222ADBB700ECDD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */; };
 		CD3EC526222ADBB700ECDD73 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC525222ADBB700ECDD73 /* SearchViewController.swift */; };
 		CD3EC529222ADBB700ECDD73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC527222ADBB700ECDD73 /* Main.storyboard */; };
 		CD3EC52B222ADBB900ECDD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */; };
 		CD3EC52E222ADBB900ECDD73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC52C222ADBB900ECDD73 /* LaunchScreen.storyboard */; };
 		CD46AA07222AE1EF002EE3FE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = CD46AA06222AE1EF002EE3FE /* .swiftlint.yml */; };
+		E4EA54C32236339A00426D0E /* AppleSearchDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EA54C22236339A00426D0E /* AppleSearchDBManager.swift */; };
+		E4F88FC922365195001B729F /* NetworkCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F88FC822365195001B729F /* NetworkCommunication.swift */; };
+		E4F88FCB2237798C001B729F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F88FCA2237798C001B729F /* TestViewController.swift */; };
+		E4F88FCD2237AFB8001B729F /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F88FCC2237AFB8001B729F /* SearchResultController.swift */; };
 		FE7477118C1C753E61F0D1C7 /* Pods_appleAppSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698C1A0647A1142CFA109D00 /* Pods_appleAppSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +28,7 @@
 		AA04B79C0C21680AC65D68FA /* Pods-appleAppSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appleAppSearch.debug.xcconfig"; path = "Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		CD1083A12233BA3200EAE560 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		CD1083A4223418AD00EAE560 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
-		CD13465D222C27F200331DBA /* SearchAppleRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppleRepo.swift; sourceTree = "<group>"; };
+		CD13465D222C27F200331DBA /* SearchAppleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppleApi.swift; sourceTree = "<group>"; };
 		CD3EC520222ADBB700ECDD73 /* appleAppSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appleAppSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EC525222ADBB700ECDD73 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +38,10 @@
 		CD3EC52F222ADBB900ECDD73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD46AA06222AE1EF002EE3FE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D9A0D9602BE8FE575EA6A186 /* Pods-appleAppSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appleAppSearch.release.xcconfig"; path = "Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch.release.xcconfig"; sourceTree = "<group>"; };
+		E4EA54C22236339A00426D0E /* AppleSearchDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSearchDBManager.swift; sourceTree = "<group>"; };
+		E4F88FC822365195001B729F /* NetworkCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCommunication.swift; sourceTree = "<group>"; };
+		E4F88FCA2237798C001B729F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E4F88FCC2237AFB8001B729F /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,8 @@
 			children = (
 				CD3EC525222ADBB700ECDD73 /* SearchViewController.swift */,
 				CD1083A4223418AD00EAE560 /* SearchResultViewController.swift */,
+				E4F88FCA2237798C001B729F /* TestViewController.swift */,
+				E4F88FCC2237AFB8001B729F /* SearchResultController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -77,7 +87,8 @@
 		CD13465C222C27D200331DBA /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CD13465D222C27F200331DBA /* SearchAppleRepo.swift */,
+				CD13465D222C27F200331DBA /* SearchAppleApi.swift */,
+				E4F88FC822365195001B729F /* NetworkCommunication.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -103,6 +114,7 @@
 		CD3EC522222ADBB700ECDD73 /* appleAppSearch */ = {
 			isa = PBXGroup;
 			children = (
+				E4EA54C12236337E00426D0E /* Database */,
 				CD1083A32234187000EAE560 /* ViewController */,
 				CD1083A02233B91900EAE560 /* Model */,
 				CD13465C222C27D200331DBA /* Network */,
@@ -122,6 +134,14 @@
 				698C1A0647A1142CFA109D00 /* Pods_appleAppSearch.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4EA54C12236337E00426D0E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				E4EA54C22236339A00426D0E /* AppleSearchDBManager.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +225,10 @@
 				"${PODS_ROOT}/Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -213,7 +236,10 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -249,11 +275,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD13465E222C27F200331DBA /* SearchAppleRepo.swift in Sources */,
+				CD13465E222C27F200331DBA /* SearchAppleApi.swift in Sources */,
 				CD3EC526222ADBB700ECDD73 /* SearchViewController.swift in Sources */,
+				E4F88FCB2237798C001B729F /* TestViewController.swift in Sources */,
+				E4F88FCD2237AFB8001B729F /* SearchResultController.swift in Sources */,
 				CD1083A5223418AD00EAE560 /* SearchResultViewController.swift in Sources */,
+				E4F88FC922365195001B729F /* NetworkCommunication.swift in Sources */,
 				CD3EC524222ADBB700ECDD73 /* AppDelegate.swift in Sources */,
 				CD1083A22233BA3300EAE560 /* SearchModel.swift in Sources */,
+				E4EA54C32236339A00426D0E /* AppleSearchDBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

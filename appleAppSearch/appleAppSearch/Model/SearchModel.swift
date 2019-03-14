@@ -17,13 +17,13 @@ struct SearchResponse :Codable {
 
 struct AppInformation : Codable {
     let isGameCenterEnabled : Bool
-    let screenshotUrls : [String]?
-    let ipadScreenshotUrls : [String]?
-    let appletvScreenshotUrls : [String]?
-    let artistViewUrl : String?
-    let artworkUrl60 : String?
-    let artworkUrl512 : String?
-    let artworkUrl100 : String?
+    let screenshotUrls : [URL]?
+    let ipadScreenshotUrls : [URL]?
+    let appletvScreenshotUrls : [URL]?
+    let artistViewUrl : URL?
+    let artworkUrl60 : URL?
+    let artworkUrl512 : URL?
+    let artworkUrl100 : URL?
     let supportedDevices : [String]?
     let kind : String?
     let features : [String]?
@@ -32,10 +32,10 @@ struct AppInformation : Codable {
     let trackCensoredName : String?
     let languageCodesISO2A : [String]?
     let fileSizeBytes : String?
-    let sellerUrl : String?
+    let sellerUrl : URL?
     let contentAdvisoryRating : String?
     let userRatingCountForCurrentVersion : Int?
-    let trackViewUrl : String?
+    let trackViewUrl : URL?
     let trackContentRating : String?
     let isVppDeviceBasedLicensingEnabled : Bool
     let sellerName : String?

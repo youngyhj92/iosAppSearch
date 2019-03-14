@@ -18,4 +18,6 @@ target 'appleAppSearch' do
   # Networking - Moya
   pod 'Moya', '~> 12.0'
 
+  # URL Image - Kingfisher
+  pod 'Kingfisher'
   end

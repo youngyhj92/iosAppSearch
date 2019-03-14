@@ -48,8 +48,7 @@ extension SearchAppleRepo : TargetType  {
                     "media":SearchAppleRepo.media,
 //                    "limit":String(describing:SearchAppleRepo.limitDataList)
                 ] ,encoding: URLEncoding.queryString)
-        default:
-           return .requestPlain
+        
         }
         
     }

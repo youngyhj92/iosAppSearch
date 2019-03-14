@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CD1083A22233BA3300EAE560 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1083A12233BA3200EAE560 /* SearchModel.swift */; };
-		CD1083A5223418AD00EAE560 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1083A4223418AD00EAE560 /* SearchResultController.swift */; };
+		CD1083A7223AC69E00EAE560 /* SearchNoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1083A6223AC69E00EAE560 /* SearchNoneCell.xib */; };
+		CD1083AA223AD45100EAE560 /* DetailAppInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1083A9223AD45100EAE560 /* DetailAppInfoCell.xib */; };
+		CD1083AC223AD58100EAE560 /* DetailReleaseNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1083AB223AD58100EAE560 /* DetailReleaseNoteCell.xib */; };
+		CD1083AE223AD59400EAE560 /* DetailScreenShotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1083AD223AD59400EAE560 /* DetailScreenShotCell.xib */; };
+		CD1083B0223AD5AA00EAE560 /* DetailDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1083AF223AD5AA00EAE560 /* DetailDescriptionCell.xib */; };
+		CD1083B2223AD62C00EAE560 /* DetailSellerInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1083B1223AD62C00EAE560 /* DetailSellerInfoCell.xib */; };
+		CD1083B4223AD94D00EAE560 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1083B3223AD94D00EAE560 /* DetailViewController.swift */; };
 		CD13465E222C27F200331DBA /* SearchAppleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13465D222C27F200331DBA /* SearchAppleApi.swift */; };
 		CD3EC524222ADBB700ECDD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */; };
-		CD3EC526222ADBB700ECDD73 /* testViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EC525222ADBB700ECDD73 /* testViewCon.swift */; };
 		CD3EC529222ADBB700ECDD73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC527222ADBB700ECDD73 /* Main.storyboard */; };
 		CD3EC52B222ADBB900ECDD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */; };
 		CD3EC52E222ADBB900ECDD73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EC52C222ADBB900ECDD73 /* LaunchScreen.storyboard */; };
@@ -29,11 +34,16 @@
 		698C1A0647A1142CFA109D00 /* Pods_appleAppSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appleAppSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA04B79C0C21680AC65D68FA /* Pods-appleAppSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appleAppSearch.debug.xcconfig"; path = "Target Support Files/Pods-appleAppSearch/Pods-appleAppSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		CD1083A12233BA3200EAE560 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
-		CD1083A4223418AD00EAE560 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
+		CD1083A6223AC69E00EAE560 /* SearchNoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchNoneCell.xib; sourceTree = "<group>"; };
+		CD1083A9223AD45100EAE560 /* DetailAppInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAppInfoCell.xib; sourceTree = "<group>"; };
+		CD1083AB223AD58100EAE560 /* DetailReleaseNoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailReleaseNoteCell.xib; sourceTree = "<group>"; };
+		CD1083AD223AD59400EAE560 /* DetailScreenShotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenShotCell.xib; sourceTree = "<group>"; };
+		CD1083AF223AD5AA00EAE560 /* DetailDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDescriptionCell.xib; sourceTree = "<group>"; };
+		CD1083B1223AD62C00EAE560 /* DetailSellerInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSellerInfoCell.xib; sourceTree = "<group>"; };
+		CD1083B3223AD94D00EAE560 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD13465D222C27F200331DBA /* SearchAppleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppleApi.swift; sourceTree = "<group>"; };
 		CD3EC520222ADBB700ECDD73 /* appleAppSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appleAppSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EC523222ADBB700ECDD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD3EC525222ADBB700ECDD73 /* testViewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewCon.swift; sourceTree = "<group>"; };
 		CD3EC528222ADBB700ECDD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD3EC52A222ADBB900ECDD73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD3EC52D222ADBB900ECDD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,12 +90,23 @@
 		CD1083A32234187000EAE560 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CD3EC525222ADBB700ECDD73 /* testViewCon.swift */,
-				CD1083A4223418AD00EAE560 /* SearchResultController.swift */,
 				E4F88FCA2237798C001B729F /* SearchViewController.swift */,
 				E4F88FCC2237AFB8001B729F /* SearchListController.swift */,
+				CD1083B3223AD94D00EAE560 /* DetailViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CD1083A8223AD3FC00EAE560 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				CD1083A9223AD45100EAE560 /* DetailAppInfoCell.xib */,
+				CD1083AB223AD58100EAE560 /* DetailReleaseNoteCell.xib */,
+				CD1083AD223AD59400EAE560 /* DetailScreenShotCell.xib */,
+				CD1083AF223AD5AA00EAE560 /* DetailDescriptionCell.xib */,
+				CD1083B1223AD62C00EAE560 /* DetailSellerInfoCell.xib */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 		CD13465C222C27D200331DBA /* Network */ = {
@@ -151,9 +172,11 @@
 		E4F88FCE2238E3AE001B729F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CD1083A8223AD3FC00EAE560 /* DetailView */,
 				CD3EC527222ADBB700ECDD73 /* Main.storyboard */,
 				E4F88FD32238E465001B729F /* SearchListCell.xib */,
 				E4F88FD522390F5F001B729F /* SearchResultCell.xib */,
+				CD1083A6223AC69E00EAE560 /* SearchNoneCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,10 +243,16 @@
 			files = (
 				CD46AA07222AE1EF002EE3FE /* .swiftlint.yml in Resources */,
 				CD3EC52E222ADBB900ECDD73 /* LaunchScreen.storyboard in Resources */,
+				CD1083A7223AC69E00EAE560 /* SearchNoneCell.xib in Resources */,
 				CD3EC52B222ADBB900ECDD73 /* Assets.xcassets in Resources */,
 				E4F88FD42238E465001B729F /* SearchListCell.xib in Resources */,
 				E4F88FD622390F5F001B729F /* SearchResultCell.xib in Resources */,
+				CD1083AA223AD45100EAE560 /* DetailAppInfoCell.xib in Resources */,
+				CD1083B2223AD62C00EAE560 /* DetailSellerInfoCell.xib in Resources */,
+				CD1083AE223AD59400EAE560 /* DetailScreenShotCell.xib in Resources */,
 				CD3EC529222ADBB700ECDD73 /* Main.storyboard in Resources */,
+				CD1083B0223AD5AA00EAE560 /* DetailDescriptionCell.xib in Resources */,
+				CD1083AC223AD58100EAE560 /* DetailReleaseNoteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,14 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD13465E222C27F200331DBA /* SearchAppleApi.swift in Sources */,
-				CD3EC526222ADBB700ECDD73 /* testViewCon.swift in Sources */,
 				E4F88FCB2237798C001B729F /* SearchViewController.swift in Sources */,
 				E4F88FCD2237AFB8001B729F /* SearchListController.swift in Sources */,
-				CD1083A5223418AD00EAE560 /* SearchResultController.swift in Sources */,
 				E4F88FC922365195001B729F /* NetworkCommunication.swift in Sources */,
 				CD3EC524222ADBB700ECDD73 /* AppDelegate.swift in Sources */,
 				CD1083A22233BA3300EAE560 /* SearchModel.swift in Sources */,
 				E4EA54C32236339A00426D0E /* AppleSearchDBManager.swift in Sources */,
+				CD1083B4223AD94D00EAE560 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

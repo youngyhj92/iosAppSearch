@@ -6,13 +6,17 @@
 //  Copyright © 2019 hyunjun yang. All rights reserved.
 //
 import UIKit
+import Foundation
 import Kingfisher
 
 class SearchListController :UITableViewController {
     
     var isSearching = true
+    var searchedWord = ""
+    var filteredResult = [String]()
+    /// Search controller to help us with filtering.
+    private var searchController: UISearchController!
     
-//    var filteredResult = [String]()
     var searchReesultData = SearchResponse(resultCount:-1, results:nil)
     lazy var resultContents : [AppInformation]? = {
         return searchReesultData.results
@@ -25,6 +29,9 @@ class SearchListController :UITableViewController {
         
         let searchedNib = UINib(nibName: "SearchResultCell", bundle: nil)
         tableView.register(searchedNib, forCellReuseIdentifier: "searchResult")
+        
+        let searchedNoneNib = UINib(nibName: "SearchNoneCell", bundle: nil)
+        tableView.register(searchedNoneNib, forCellReuseIdentifier: "searchNone")
 
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
@@ -35,42 +42,62 @@ class SearchListController :UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchReesultData.resultCount
+        if isSearching  {
+            return filteredResult.count
+        } else {
+            if searchReesultData.resultCount == 0  {
+                return 1
+            } else {
+                return searchReesultData.resultCount
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if isSearching  {
+        if isSearching {
             let cell = tableView.dequeueReusableCell(withIdentifier: "searchList", for: indexPath)
-            if resultContents == nil {
-                cell.textLabel?.text = nil
-            } else {
-                cell.textLabel?.text = resultContents![indexPath.row].trackName
-            }
+                cell.textLabel?.text = filteredResult[indexPath.row]
             return cell
             
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "searchResult") as! SearchResultCell
-            tableView.rowHeight = UITableView.automaticDimension
-            let rowAppInfo = resultContents?[indexPath.row]
-            let logoImageSet = RoundCornerImageProcessor(cornerRadius: 20)
-            let screenShotImageSet = RoundCornerImageProcessor(cornerRadius: 50)
-            cell.appTitle.text = rowAppInfo?.trackName
-            cell.appCategory.text = rowAppInfo?.primaryGenreName
-            cell.appRating.text = rowAppInfo?.trackContentRating
-            cell.logoImage.kf.setImage(with:rowAppInfo?.artworkUrl100,options:[.processor(logoImageSet)])
-            cell.explainImage1.kf.setImage(with: rowAppInfo?.screenshotUrls?[0], options:[.processor(screenShotImageSet)])
-            cell.explainImage2?.kf.setImage(with: rowAppInfo?.screenshotUrls?[1],options:[.processor(screenShotImageSet)])
-            cell.explainImage3?.kf.setImage(with: rowAppInfo?.screenshotUrls?[2],options:[.processor(screenShotImageSet)])
-            return cell
+            if searchReesultData.resultCount == 0  {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "searchNone", for: indexPath) as! SearchResultNoneCell
+                cell.searchWord.text = searchedWord
+                return cell
+            } else  {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "searchResult") as! SearchResultCell
+                tableView.rowHeight = UITableView.automaticDimension
+                let rowAppInfo = resultContents?[indexPath.row]
+                let logoImageSet = RoundCornerImageProcessor(cornerRadius: 20)
+                let screenShotImageSet = RoundCornerImageProcessor(cornerRadius: 50)
+                cell.appTitle.text = rowAppInfo?.trackName
+                cell.appCategory.text = rowAppInfo?.primaryGenreName
+                cell.appRating.text = rowAppInfo?.trackContentRating
+                cell.logoImage.kf.setImage(with:rowAppInfo?.artworkUrl100,options:[.processor(logoImageSet)])
+                cell.explainImage1.kf.setImage(with: rowAppInfo?.screenshotUrls?[0], options:[.processor(screenShotImageSet)])
+                cell.explainImage2?.kf.setImage(with: rowAppInfo?.screenshotUrls?[1],options:[.processor(screenShotImageSet)])
+                cell.explainImage3?.kf.setImage(with: rowAppInfo?.screenshotUrls?[2],options:[.processor(screenShotImageSet)])
+                return cell
+            }
         }
      
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//      
+        log.verbose(searchedWord)
+        if !(searchedWord.isEmpty)  {
+            guard let detailInfoView = self.storyboard!.instantiateViewController(withIdentifier:
+                "detailInfo")as? DetailViewController else {
+                    return
+            }
+            //            detailInfoView.appInfoData = self.resultContents![indexPath.row]
+            self.navigationController?.pushViewController(detailInfoView, animated: true)
+            
+            //            self.navigationController?.pushViewController(DetailViewController, animated: true)
+        }
         
+
     }
-    
 }
 
 class SearchResultCell : UITableViewCell  {
@@ -82,4 +109,9 @@ class SearchResultCell : UITableViewCell  {
     @IBOutlet weak var explainImage1: UIImageView!
     @IBOutlet weak var explainImage2: UIImageView?
     @IBOutlet weak var explainImage3: UIImageView?
+}
+
+class SearchResultNoneCell : UITableViewCell  {
+    
+    @IBOutlet weak var searchWord: UILabel!
 }

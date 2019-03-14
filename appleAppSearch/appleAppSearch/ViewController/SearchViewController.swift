@@ -7,12 +7,13 @@
 //
 import UIKit
 
+
 class SearchViewController : UITableViewController {
     
     //Properties
-    var filteredData : [String]!
-    var historyStringList = [String]()
     let networking = Networking()
+    let historyDatabase = DatabaseProces()
+    var historyStringList = [String]()
     
     /// Search controller to help us with filtering.
     private var searchController: UISearchController!
@@ -47,24 +48,22 @@ class SearchViewController : UITableViewController {
         searchController.searchBar.delegate = self
         definesPresentationContext = true
         
-        filteredData = historyStringList
     }
     
     
     func loadHistoryData()  {
         //Database -> History 불러와서 저장.
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-        historyStringList.append("wrapsody")
-    }
+        historyStringList.removeAll()
+        let historyData = historyDatabase.realm.objects(History.self).distinct(by:["historyTitle"])
+        var listIndex = 0
+        for dataIndex in stride(from: historyData.count - 1, to: 0, by: -1)  {
+            historyStringList.insert(historyData[dataIndex].historyTitle, at: listIndex)
+            listIndex += 1
+        }
+        
+        
     
+    }
 }
 
 
@@ -80,6 +79,7 @@ extension SearchViewController  {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyViewCell") as! HistoryTableViewCell
         cell.historyTitle.text = historyStringList[indexPath.row]
         
@@ -87,11 +87,14 @@ extension SearchViewController  {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.searchController.isActive = true
-        self.searchController.searchBar.text = historyStringList[indexPath.row]
-        updateSearchResults(for: self.searchController)
-        searchBar(self.searchController.searchBar,textDidChange: historyStringList[indexPath.row])
-        searchBarSearchButtonClicked(self.searchController.searchBar)
+        log.verbose(searchController.isActive)
+        if self.searchController.isActive == false  {
+            self.searchController.isActive = true
+            self.searchController.searchBar.text = historyStringList[indexPath.row]
+            updateSearchResults(for: self.searchController)
+            searchBar(self.searchController.searchBar,textDidChange: historyStringList[indexPath.row])
+            searchBarSearchButtonClicked(self.searchController.searchBar)
+        }
     }
 }
 
@@ -104,23 +107,40 @@ extension SearchViewController : UISearchControllerDelegate  {
 extension SearchViewController : UISearchBarDelegate  {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredData = searchText.isEmpty ? historyStringList : historyStringList.filter({(dataString:String) -> Bool in
+        self.searchListVC.filteredResult = searchText.isEmpty ? historyStringList : historyStringList.filter({(dataString:String) -> Bool in
             return dataString.range(of: searchText,options: .caseInsensitive) != nil
         })
+        self.searchListVC.tableView.reloadData()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchListVC.isSearching = false
         searchListVC.tableView.rowHeight = UITableView.automaticDimension
+        searchListVC.searchedWord = searchBar.text!
+        //Searching to Network
         networking.AppleSearch(words: searchController.searchBar.text!) { response in
             log.verbose(response.resultCount)
             self.searchListVC.searchReesultData = response
             self.searchListVC.tableView.reloadData()
         }
+        
+        //input Database
+        guard let searchingText = searchBar.text else {
+            log.verbose("Fail input data")
+            return
+        }
+        let inputDataToDB = History()
+        inputDataToDB.historyTitle = searchingText
+        historyDatabase.writeDatabase(value: inputDataToDB)
+        log.verbose("success input data")
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        historyDatabase.realm.refresh()
+        loadHistoryData()
+        tableView.reloadData()
         self.searchController.isActive = false
+        
     }
 }
 
@@ -130,8 +150,7 @@ extension SearchViewController : UISearchResultsUpdating  {
     func updateSearchResults(for searchController: UISearchController) {
         if let resultsController = searchController.searchResultsController as? SearchListController  {
             resultsController.isSearching = true
-            // TODO :  Database History Filter
-//            resultsController.tableView.reloadData()
+            resultsController.tableView.reloadData()
         }
         
     }

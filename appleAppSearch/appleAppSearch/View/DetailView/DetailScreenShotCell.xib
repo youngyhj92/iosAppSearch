@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="screenshotCell" id="Clg-Fv-KFl" customClass="DetailScreenShotCell" customModule="appleAppSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="207"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Clg-Fv-KFl" id="IKE-tV-pjj">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="206.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MBJ-Nw-IST">
+                        <rect key="frame" x="20" y="49" width="125" height="147"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="125" id="mpv-uF-Dxy"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OfZ-FT-Qb4">
+                        <rect key="frame" x="149" y="49" width="124" height="147"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미리보기" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDT-mO-chx">
+                        <rect key="frame" x="20" y="11" width="86.5" height="30"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NzH-zq-skL">
+                        <rect key="frame" x="277" y="49" width="125" height="147"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MBJ-Nw-IST" firstAttribute="top" secondItem="lDT-mO-chx" secondAttribute="bottom" constant="8" id="4HX-4W-wwX"/>
+                    <constraint firstItem="OfZ-FT-Qb4" firstAttribute="centerY" secondItem="MBJ-Nw-IST" secondAttribute="centerY" id="4bF-TW-8C5"/>
+                    <constraint firstItem="NzH-zq-skL" firstAttribute="leading" secondItem="OfZ-FT-Qb4" secondAttribute="trailing" constant="4" id="I9s-b4-PM7"/>
+                    <constraint firstItem="NzH-zq-skL" firstAttribute="bottom" secondItem="IKE-tV-pjj" secondAttribute="bottomMargin" id="Mg2-sy-etA"/>
+                    <constraint firstItem="OfZ-FT-Qb4" firstAttribute="centerX" secondItem="IKE-tV-pjj" secondAttribute="centerX" id="O4M-2v-7dB"/>
+                    <constraint firstItem="MBJ-Nw-IST" firstAttribute="leading" secondItem="IKE-tV-pjj" secondAttribute="leadingMargin" id="O5Z-Vr-TIy"/>
+                    <constraint firstItem="NzH-zq-skL" firstAttribute="trailing" secondItem="IKE-tV-pjj" secondAttribute="trailingMargin" id="SMP-w8-hAZ"/>
+                    <constraint firstItem="NzH-zq-skL" firstAttribute="centerY" secondItem="MBJ-Nw-IST" secondAttribute="centerY" id="UG8-3R-JP4"/>
+                    <constraint firstItem="lDT-mO-chx" firstAttribute="leading" secondItem="IKE-tV-pjj" secondAttribute="leadingMargin" id="fMU-6K-mNb"/>
+                    <constraint firstItem="OfZ-FT-Qb4" firstAttribute="leading" secondItem="MBJ-Nw-IST" secondAttribute="trailing" constant="4" id="fND-Ve-1VS"/>
+                    <constraint firstItem="OfZ-FT-Qb4" firstAttribute="bottom" secondItem="IKE-tV-pjj" secondAttribute="bottomMargin" id="hwx-lg-vni"/>
+                    <constraint firstItem="lDT-mO-chx" firstAttribute="top" secondItem="IKE-tV-pjj" secondAttribute="topMargin" id="jbI-Ea-k23"/>
+                    <constraint firstItem="MBJ-Nw-IST" firstAttribute="bottom" secondItem="IKE-tV-pjj" secondAttribute="bottomMargin" id="qqV-Tr-iqw"/>
+                    <constraint firstItem="MBJ-Nw-IST" firstAttribute="leading" secondItem="lDT-mO-chx" secondAttribute="leading" id="rQK-q1-WsG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="explainImage1" destination="MBJ-Nw-IST" id="kjo-d3-Xbq"/>
+                <outlet property="explainImage2" destination="OfZ-FT-Qb4" id="lAg-i2-FJ7"/>
+                <outlet property="explainImage3" destination="NzH-zq-skL" id="8I6-TI-IqL"/>
+                <outlet property="firstScreenShot" destination="IKE-tV-pjj" id="qCt-Mo-PLO"/>
+                <outlet property="secondScreenShot" destination="OfZ-FT-Qb4" id="BsO-S5-AB3"/>
+                <outlet property="thirdScreenShot" destination="NzH-zq-skL" id="R5J-Vh-3d2"/>
+            </connections>
+            <point key="canvasLocation" x="115.2" y="127.28635682158921"/>
+        </tableViewCell>
+    </objects>
+</document>

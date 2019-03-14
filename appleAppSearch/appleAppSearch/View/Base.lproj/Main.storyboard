@@ -78,70 +78,33 @@
             </objects>
             <point key="canvasLocation" x="119.2" y="285.60719640179911"/>
         </scene>
-        <!--Search Result View Controller-->
-        <scene sceneID="iCl-ew-VMq">
+        <!--Detail View Controller-->
+        <scene sceneID="ST1-Cq-HcM">
             <objects>
-                <tableViewController storyboardIdentifier="resultViewController" id="Ijc-dN-u3g" customClass="SearchResultViewController" customModule="appleAppSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xaq-Of-X8l">
+                <tableViewController storyboardIdentifier="detailInfo" id="ZjY-wV-m5P" customClass="DetailViewController" customModule="appleAppSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mSU-hs-K6p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="sLd-6B-8wL">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="Ijc-dN-u3g" id="07T-gt-DWP"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="103" id="du1-Yn-6Ch">
-                                <rect key="frame" x="0.0" y="72" width="375" height="103"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1Dd-8e-Ovl">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="du1-Yn-6Ch" id="lxN-3i-SmU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="102.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Dd-8e-Ovl" id="umO-VX-bRB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5z-nS-Dgt">
-                                            <rect key="frame" x="61" y="40" width="79" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Ijc-dN-u3g" id="M0u-9D-9pb"/>
-                            <outlet property="delegate" destination="Ijc-dN-u3g" id="d6m-iQ-CAT"/>
+                            <outlet property="dataSource" destination="ZjY-wV-m5P" id="lMo-7n-jX3"/>
+                            <outlet property="delegate" destination="ZjY-wV-m5P" id="ora-54-SZo"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="Zqj-JE-dCB" id="8Vu-Fg-wWc"/>
-                    </connections>
                 </tableViewController>
-                <searchDisplayController id="vRc-4e-x3u">
-                    <connections>
-                        <outlet property="delegate" destination="Ijc-dN-u3g" id="Y7Z-YN-KsT"/>
-                        <outlet property="searchContentsController" destination="Ijc-dN-u3g" id="28H-Os-Dxf"/>
-                        <outlet property="searchResultsDataSource" destination="Ijc-dN-u3g" id="6iB-yQ-1LD"/>
-                        <outlet property="searchResultsDelegate" destination="Ijc-dN-u3g" id="4nw-wn-gAu"/>
-                    </connections>
-                </searchDisplayController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8ID-gI-hTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Zqj-JE-dCB">
-                    <connections>
-                        <outlet property="delegate" destination="Ijc-dN-u3g" id="tHm-eD-wUP"/>
-                        <outlet property="searchBar" destination="sLd-6B-8wL" id="FhF-QC-oKQ"/>
-                        <outlet property="searchContentsController" destination="Ijc-dN-u3g" id="xgt-Xf-QmW"/>
-                        <outlet property="searchResultsDataSource" destination="Ijc-dN-u3g" id="peE-JV-pCi"/>
-                        <outlet property="searchResultsDelegate" destination="Ijc-dN-u3g" id="YGk-uK-bjl"/>
-                    </connections>
-                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwX-Kr-UQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3247.1999999999998" y="285.60719640179911"/>
+            <point key="canvasLocation" x="892" y="276"/>
         </scene>
         <!--Item-->
         <scene sceneID="qbe-eY-C6i">

@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController : UITableViewController  {
     
-//    var appInfoData = AppInformation()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,8 @@ class DetailViewController : UITableViewController  {
         tableView.register(detailDescriptionNib, forCellReuseIdentifier: "descriptionCell")
         let detailSellerInfoNib = UINib(nibName: "DetailSellerInfoCell", bundle: nil)
         tableView.register(detailSellerInfoNib, forCellReuseIdentifier: "sellerInfo")
+        
+        tableView.estimatedRowHeight = UITableView.automaticDimension
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,20 +38,21 @@ class DetailViewController : UITableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.rowHeight = UITableView.automaticDimension
         switch indexPath.row {
-        case 1:
+        case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "appInfoCell", for: indexPath) as! DetailAppInfoCell
             return cell
-        case 2:
+        case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "releaseNoteCell", for: indexPath) as! DetailReleaseNoteCell
             return cell
-        case 3:
+        case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "screenshotCell", for: indexPath) as! DetailScreenShotCell
             return cell
-        case 4:
+        case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionCell", for: indexPath) as! DetailDescriptionCell
             return cell
-        case 5:
+        case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: "sellerInfo", for: indexPath) as! DetailSellerInfoCell
             return cell
         default:

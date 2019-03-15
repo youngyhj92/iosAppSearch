@@ -33,13 +33,13 @@ class SearchListController :UITableViewController {
         let searchedNoneNib = UINib(nibName: "SearchNoneCell", bundle: nil)
         tableView.register(searchedNoneNib, forCellReuseIdentifier: "searchNone")
 
-        tableView.estimatedRowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isSearching  {
@@ -66,17 +66,16 @@ class SearchListController :UITableViewController {
                 return cell
             } else  {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "searchResult") as! SearchResultCell
-                tableView.rowHeight = UITableView.automaticDimension
                 let rowAppInfo = resultContents?[indexPath.row]
                 let logoImageSet = RoundCornerImageProcessor(cornerRadius: 20)
                 let screenShotImageSet = RoundCornerImageProcessor(cornerRadius: 50)
-                cell.appTitle.text = rowAppInfo?.trackName
-                cell.appCategory.text = rowAppInfo?.primaryGenreName
-                cell.appRating.text = rowAppInfo?.trackContentRating
-                cell.logoImage.kf.setImage(with:rowAppInfo?.artworkUrl100,options:[.processor(logoImageSet)])
-                cell.explainImage1.kf.setImage(with: rowAppInfo?.screenshotUrls?[0], options:[.processor(screenShotImageSet)])
-                cell.explainImage2?.kf.setImage(with: rowAppInfo?.screenshotUrls?[1],options:[.processor(screenShotImageSet)])
-                cell.explainImage3?.kf.setImage(with: rowAppInfo?.screenshotUrls?[2],options:[.processor(screenShotImageSet)])
+                cell.appTitle.text = rowAppInfo!.trackName
+                cell.appCategory.text = rowAppInfo!.primaryGenreName
+                cell.appRating.text = rowAppInfo!.trackContentRating
+                cell.logoImage.kf.setImage(with:rowAppInfo!.artworkUrl100,options:[.processor(logoImageSet)])
+                cell.explainImage1.kf.setImage(with: rowAppInfo!.screenshotUrls?[0], options:[.processor(screenShotImageSet)])
+                cell.explainImage2.kf.setImage(with: rowAppInfo!.screenshotUrls?[1],options:[.processor(screenShotImageSet)])
+                cell.explainImage3.kf.setImage(with: rowAppInfo!.screenshotUrls?[2],options:[.processor(screenShotImageSet)])
                 return cell
             }
         }
@@ -84,18 +83,18 @@ class SearchListController :UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        log.verbose(searchedWord)
-        if !(searchedWord.isEmpty)  {
-            guard let detailInfoView = self.storyboard!.instantiateViewController(withIdentifier:
-                "detailInfo")as? DetailViewController else {
-                    return
-            }
-            //            detailInfoView.appInfoData = self.resultContents![indexPath.row]
-            self.navigationController?.pushViewController(detailInfoView, animated: true)
-            
-            //            self.navigationController?.pushViewController(DetailViewController, animated: true)
-        }
-        
+//        log.verbose(searchedWord)
+//        if !(searchedWord.isEmpty)  {
+//            guard let detailInfoView = self.storyboard!.instantiateViewController(withIdentifier:
+//                "detailInfo")as? DetailViewController else {
+//                    return
+//            }
+//            //            detailInfoView.appInfoData = self.resultContents![indexPath.row]
+//            self.navigationController?.pushViewController(detailInfoView, animated: true)
+//
+//            //            self.navigationController?.pushViewController(DetailViewController, animated: true)
+//        }
+//
 
     }
 }
@@ -107,8 +106,8 @@ class SearchResultCell : UITableViewCell  {
     @IBOutlet weak var appCategory: UILabel!
     @IBOutlet weak var appRating: UILabel!
     @IBOutlet weak var explainImage1: UIImageView!
-    @IBOutlet weak var explainImage2: UIImageView?
-    @IBOutlet weak var explainImage3: UIImageView?
+    @IBOutlet weak var explainImage2: UIImageView!
+    @IBOutlet weak var explainImage3: UIImageView!
 }
 
 class SearchResultNoneCell : UITableViewCell  {

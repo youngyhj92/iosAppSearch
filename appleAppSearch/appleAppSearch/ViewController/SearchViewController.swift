@@ -94,6 +94,14 @@ extension SearchViewController  {
             updateSearchResults(for: self.searchController)
             searchBar(self.searchController.searchBar,textDidChange: historyStringList[indexPath.row])
             searchBarSearchButtonClicked(self.searchController.searchBar)
+        }  else {
+            guard let detailInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailInfo") as? DetailViewController else {
+                log.error("detail False")
+                return
+            }
+            self.navigationController?.pushViewController(detailInfoViewController, animated: true)
+            
+            
         }
     }
 }
@@ -115,13 +123,13 @@ extension SearchViewController : UISearchBarDelegate  {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchListVC.isSearching = false
-        searchListVC.tableView.rowHeight = UITableView.automaticDimension
         searchListVC.searchedWord = searchBar.text!
         //Searching to Network
         networking.AppleSearch(words: searchController.searchBar.text!) { response in
             log.verbose(response.resultCount)
             self.searchListVC.searchReesultData = response
             self.searchListVC.tableView.reloadData()
+
         }
         
         //input Database
@@ -133,6 +141,7 @@ extension SearchViewController : UISearchBarDelegate  {
         inputDataToDB.historyTitle = searchingText
         historyDatabase.writeDatabase(value: inputDataToDB)
         log.verbose("success input data")
+        
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

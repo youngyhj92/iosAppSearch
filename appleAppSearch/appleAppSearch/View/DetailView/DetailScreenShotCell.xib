@@ -55,10 +55,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="explainImage1" destination="MBJ-Nw-IST" id="kjo-d3-Xbq"/>
-                <outlet property="explainImage2" destination="OfZ-FT-Qb4" id="lAg-i2-FJ7"/>
-                <outlet property="explainImage3" destination="NzH-zq-skL" id="8I6-TI-IqL"/>
-                <outlet property="firstScreenShot" destination="IKE-tV-pjj" id="qCt-Mo-PLO"/>
+                <outlet property="firstScreenShot" destination="MBJ-Nw-IST" id="Yf5-yI-5XC"/>
                 <outlet property="secondScreenShot" destination="OfZ-FT-Qb4" id="BsO-S5-AB3"/>
                 <outlet property="thirdScreenShot" destination="NzH-zq-skL" id="R5J-Vh-3d2"/>
             </connections>

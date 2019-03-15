@@ -99,6 +99,7 @@ extension SearchViewController  {
                 log.error("detail False")
                 return
             }
+            detailInfoViewController.appInfoData = self.searchListVC.resultContents![indexPath.row]
             self.navigationController?.pushViewController(detailInfoViewController, animated: true)
             
             

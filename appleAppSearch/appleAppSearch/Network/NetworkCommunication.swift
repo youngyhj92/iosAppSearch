@@ -17,7 +17,7 @@ class Networking {
             switch result {
             case let .success(moyaResponse):
                 log.verbose("Network Connection Success")
-//                log.verbose(moyaResponse.data.base64EncodedString())
+                log.verbose(moyaResponse.data.base64EncodedString())
                 let decoder = JSONDecoder()
                 do {
                     let resultInfo = try decoder.decode(SearchResponse.self, from: moyaResponse.data)

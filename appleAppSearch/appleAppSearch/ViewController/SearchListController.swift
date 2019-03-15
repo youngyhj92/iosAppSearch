@@ -33,13 +33,8 @@ class SearchListController :UITableViewController {
         let searchedNoneNib = UINib(nibName: "SearchNoneCell", bundle: nil)
         tableView.register(searchedNoneNib, forCellReuseIdentifier: "searchNone")
 
-//        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
     }
-    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isSearching  {
@@ -80,22 +75,6 @@ class SearchListController :UITableViewController {
             }
         }
      
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        log.verbose(searchedWord)
-//        if !(searchedWord.isEmpty)  {
-//            guard let detailInfoView = self.storyboard!.instantiateViewController(withIdentifier:
-//                "detailInfo")as? DetailViewController else {
-//                    return
-//            }
-//            //            detailInfoView.appInfoData = self.resultContents![indexPath.row]
-//            self.navigationController?.pushViewController(detailInfoView, animated: true)
-//
-//            //            self.navigationController?.pushViewController(DetailViewController, animated: true)
-//        }
-//
-
     }
 }
 

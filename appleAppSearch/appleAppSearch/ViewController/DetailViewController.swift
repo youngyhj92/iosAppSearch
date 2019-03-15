@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController : UITableViewController  {
     
-    
+    var appInfoData = AppInformation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +38,19 @@ class DetailViewController : UITableViewController  {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.rowHeight = UITableView.automaticDimension
+        
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "appInfoCell", for: indexPath) as! DetailAppInfoCell
+            cell.appTitle.text = appInfoData.trackName
+            cell.companyTitle.text = appInfoData.sellerName
+//            cell.ratingTitle.text = appInfoData.averageUserRatingForCurrentVersion
+//            cell.usageAge.text = appInfoData.
+            
+            
+            
+            
+            
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "releaseNoteCell", for: indexPath) as! DetailReleaseNoteCell

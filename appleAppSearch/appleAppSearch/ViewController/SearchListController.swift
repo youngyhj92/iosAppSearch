@@ -68,9 +68,10 @@ class SearchListController :UITableViewController {
                 cell.appCategory.text = rowAppInfo!.primaryGenreName
                 cell.appRating.text = rowAppInfo!.trackContentRating
                 cell.logoImage.kf.setImage(with:rowAppInfo!.artworkUrl100,options:[.processor(logoImageSet)])
+                
                 cell.explainImage1.kf.setImage(with: rowAppInfo!.screenshotUrls?[0], options:[.processor(screenShotImageSet)])
-                cell.explainImage2.kf.setImage(with: rowAppInfo!.screenshotUrls?[1],options:[.processor(screenShotImageSet)])
-                cell.explainImage3.kf.setImage(with: rowAppInfo!.screenshotUrls?[2],options:[.processor(screenShotImageSet)])
+//                cell.explainImage2.kf.setImage(with: rowAppInfo!.screenshotUrls?[1],options:[.processor(screenShotImageSet)])
+//                cell.explainImage3.kf.setImage(with: rowAppInfo!.screenshotUrls?[2],options:[.processor(screenShotImageSet)])
                 return cell
             }
         }
